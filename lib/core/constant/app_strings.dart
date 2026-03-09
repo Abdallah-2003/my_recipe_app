@@ -1,0 +1,8 @@
+
+abstract class AppStrings {
+
+
+
+}
+
+
