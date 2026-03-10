@@ -33,6 +33,10 @@ abstract class AppStrings {
   static const String categories = 'Categories';
   static const String seeAll = 'See All';
 
+  // layout 
+  static const String home = 'HOME';
+  static const String favorite = 'FAVORITE';
+  static const String profile = 'PROFILE';
 }
 
 
