@@ -22,7 +22,9 @@ class SignInView extends StatelessWidget {
               const SizedBox(height: 24,),
               SignInForm(),
               const SizedBox(height: 24,),
-              SocialSignUp(),
+              SocialSignUp(
+                text: AppStrings.orSignInWith,
+              ),
               const SizedBox(height: 24,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

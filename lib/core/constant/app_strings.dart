@@ -26,6 +26,12 @@ abstract class AppStrings {
   static const String signInToContinue = 'Sign in to continue your culinary journey';
   static const String forgetPassword = 'Forget Password?';
   static const String noAccount = "Don't have an account?";
+  static const String orSignInWith = 'Or sign in with';
+
+  // home screen
+  static const String searchRecipe = 'Search recipes, ingredients...';
+  static const String categories = 'Categories';
+  static const String seeAll = 'See All';
 
 }
 
