@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_recipe/features/auth/presentation/views/sign_up_view.dart';
+import 'package:my_recipe/features/auth/presentation/views/sign_in_view.dart';
 
 void main() {
   runApp(const MyRecipe());
@@ -13,7 +13,7 @@ class MyRecipe extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'my recipe app',
-      home: const SignUpView(),
+      home: const SignInView(),
     );
   }
 }

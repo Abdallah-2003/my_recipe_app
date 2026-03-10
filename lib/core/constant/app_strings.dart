@@ -21,6 +21,12 @@ abstract class AppStrings {
   static const String fullNameHint = 'John Doe';
   static const String emailHint = 'hello@example.com';
 
+  // sign in screen
+  static const String welcomeBack = 'Welcome Back';
+  static const String signInToContinue = 'Sign in to continue your culinary journey';
+  static const String forgetPassword = 'Forget Password?';
+  static const String noAccount = "Don't have an account?";
+
 }
 
 
