@@ -45,6 +45,9 @@ abstract class AppStrings {
   static const String italian = 'ITALIAN';
   static const String dinner = 'DINNER';
   static const String recipeName = 'Spicy Basil Pesto Pasta';
+
+  // my favorite view
+  static const String myFavorite = 'My Favorites';
 }
 
 

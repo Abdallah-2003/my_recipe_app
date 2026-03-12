@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_recipe/features/details/presentation/views/recipe_details_view.dart';
+import 'package:my_recipe/features/favorites/presentation/views/my_favorite_view.dart';
 
 void main() {
   runApp(const MyRecipe());
@@ -13,7 +13,7 @@ class MyRecipe extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'my recipe app',
-      home: const RecipeDetailsView(),
+      home: const FavoritesView(),
     );
   }
 }
