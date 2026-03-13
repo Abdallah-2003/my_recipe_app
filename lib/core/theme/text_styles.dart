@@ -13,7 +13,7 @@ class AppTextStyles {
     fontFamily: 'Plus Jakarta Sans',
     fontWeight: FontWeight.w400,
     color: AppColors.c8b,
-    fontSize: 14, 
+    fontSize: 14,
   );
 
   static const TextStyle styleBold18 = TextStyle(
@@ -23,10 +23,9 @@ class AppTextStyles {
     fontSize: 18,
   );
 
-
   static const TextStyle styleRegular16 = TextStyle(
     fontFamily: 'Plus Jakarta Sans',
-    fontWeight: FontWeight.w400, 
+    fontWeight: FontWeight.w400,
     color: AppColors.cb8,
     fontSize: 16,
   );
@@ -38,10 +37,9 @@ class AppTextStyles {
     fontSize: 12,
   );
 
-
   static const TextStyle stylrMedium11 = TextStyle(
     fontFamily: 'Plus Jakarta Sans',
-    fontWeight: FontWeight.w500, 
+    fontWeight: FontWeight.w500,
     color: AppColors.cb8,
     fontSize: 11,
   );
@@ -108,5 +106,4 @@ class AppTextStyles {
     color: AppColors.c2a,
     fontSize: 32,
   );
-
 }

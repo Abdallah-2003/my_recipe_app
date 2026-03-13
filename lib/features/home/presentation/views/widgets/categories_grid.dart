@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:my_recipe/features/home/data/model/categories_model.dart';
 import 'package:my_recipe/features/home/presentation/views/widgets/category_card.dart';
 
 class CategoriesGrid extends StatelessWidget {
-  const CategoriesGrid({super.key});
+  const CategoriesGrid({super.key, required this.categories});
+
+  final List<CategoriesModel> categories;
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +18,11 @@ class CategoriesGrid extends StatelessWidget {
         mainAxisSpacing: 16,
         childAspectRatio: 0.85,
       ),
-      itemCount: 8,
+      itemCount: categories.length,
       itemBuilder: (context, index) {
         return CategoryCard(
-          title: 'BEEF',
-          imagePath: 'assets/images/image.png',
+          title: categories[index].strCategory ?? '',
+          imagePath: categories[index].strCategoryThumb ?? '',
         );
       },
     );

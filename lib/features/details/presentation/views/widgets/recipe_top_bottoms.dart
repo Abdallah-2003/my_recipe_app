@@ -23,7 +23,10 @@ class RecipeTopButtons extends StatelessWidget {
             CircleAvatar(
               backgroundColor: AppColors.white,
               child: IconButton(
-                icon: const Icon(AppIcons.favoriteBorder, color: AppColors.primary),
+                icon: const Icon(
+                  AppIcons.favoriteBorder,
+                  color: AppColors.primary,
+                ),
                 onPressed: () {},
               ),
             ),

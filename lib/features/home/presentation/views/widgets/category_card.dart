@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CategoryCard extends StatelessWidget {
@@ -14,17 +13,14 @@ class CategoryCard extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          Image.asset(imagePath, fit: BoxFit.cover),
+          Image.network(imagePath, fit: BoxFit.cover),
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [
-                  Colors.transparent,
-                  Colors.black87,
-                ],
-                stops: [0.6, 1.0], 
+                colors: [Colors.transparent, Colors.black87],
+                stops: [0.6, 1.0],
               ),
             ),
           ),

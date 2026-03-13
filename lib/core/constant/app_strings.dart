@@ -1,6 +1,4 @@
-
 abstract class AppStrings {
-
   // splash screen
   static const String recipeFinder = 'Recipe Finder';
   static const String cookWithPassion = 'COOK WITH PASSION';
@@ -23,7 +21,8 @@ abstract class AppStrings {
 
   // sign in screen
   static const String welcomeBack = 'Welcome Back';
-  static const String signInToContinue = 'Sign in to continue your culinary journey';
+  static const String signInToContinue =
+      'Sign in to continue your culinary journey';
   static const String forgetPassword = 'Forget Password?';
   static const String noAccount = "Don't have an account?";
   static const String orSignInWith = 'Or sign in with';
@@ -33,7 +32,7 @@ abstract class AppStrings {
   static const String categories = 'Categories';
   static const String seeAll = 'See All';
 
-  // layout 
+  // layout
   static const String home = 'HOME';
   static const String favorite = 'FAVORITE';
   static const String profile = 'PROFILE';
@@ -50,19 +49,17 @@ abstract class AppStrings {
   static const String myFavorite = 'My Favorites';
 
   // profile screen
-  static const String profileSmall = 'Profile'; 
-  static const String account = 'ACCOUNT'; 
-  static const String preferences = 'PREFERENCES'; 
-  static const String editProfile = 'Edit Profile'; 
-  static const String changePassword = 'Change Password'; 
-  static const String darkMode = 'Dark Mode'; 
-  static const String language = 'Language'; 
-  static const String english = 'English'; 
-  static const String support = 'SUPPORT'; 
-  static const String helpCenter = 'Help Center'; 
-  static const String privacyPolicy = 'Privacy Policy'; 
-  static const String terms = 'Terms of Services'; 
+  static const String profileSmall = 'Profile';
+  static const String account = 'ACCOUNT';
+  static const String preferences = 'PREFERENCES';
+  static const String editProfile = 'Edit Profile';
+  static const String changePassword = 'Change Password';
+  static const String darkMode = 'Dark Mode';
+  static const String language = 'Language';
+  static const String english = 'English';
+  static const String support = 'SUPPORT';
+  static const String helpCenter = 'Help Center';
+  static const String privacyPolicy = 'Privacy Policy';
+  static const String terms = 'Terms of Services';
   static const String logout = 'Logout';
 }
-
-

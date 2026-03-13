@@ -58,18 +58,12 @@ class ProfileView extends StatelessWidget {
             const SizedBox(height: 32),
 
             buildSectionTitle(AppStrings.support),
-            buildProfileItem(
-              Icons.help_outline,
-              AppStrings.helpCenter,
-            ),
+            buildProfileItem(Icons.help_outline, AppStrings.helpCenter),
             buildProfileItem(
               Icons.privacy_tip_outlined,
               AppStrings.privacyPolicy,
             ),
-            buildProfileItem(
-              Icons.book_online_outlined,
-              AppStrings.terms,
-            ),
+            buildProfileItem(Icons.book_online_outlined, AppStrings.terms),
             SizedBox(
               width: double.infinity,
               child: OutlinedButton.icon(
@@ -94,7 +88,4 @@ class ProfileView extends StatelessWidget {
       ),
     );
   }
-
 }
-
-

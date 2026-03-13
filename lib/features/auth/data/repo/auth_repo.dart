@@ -1,4 +1,3 @@
-
 import 'package:dartz/dartz.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -20,7 +19,7 @@ class AuthRepo {
   Future<Either<String, void>> signUp({
     required String email,
     required String password,
-    required String username, 
+    required String username,
   }) async {
     try {
       await client.auth.signUp(email: email, password: password);
@@ -30,7 +29,6 @@ class AuthRepo {
       return Left(e.toString());
     }
   }
-
 
   Future<Either<String, void>> saveUserData({
     required String username,
@@ -43,7 +41,7 @@ class AuthRepo {
         'email': email,
       });
       return right(null);
-    } catch(e) {
+    } catch (e) {
       return left(e.toString());
     }
   }

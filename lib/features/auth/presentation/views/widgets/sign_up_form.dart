@@ -15,7 +15,6 @@ class SignUpForm extends StatefulWidget {
 }
 
 class _SignUpFormState extends State<SignUpForm> {
-
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -37,55 +36,64 @@ class _SignUpFormState extends State<SignUpForm> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(AppStrings.fullName, style: AppTextStyles.styleBold14),
-           CustomTextField(hint: AppStrings.fullNameHint, icon: Icons.person_outline,
-          controller: nameController,
-          validator: (value) {
-            if (value == null || value.isEmpty) {
-                  return 'Please enter your username';
-                }
-                return null;
-          },
-          
+          CustomTextField(
+            hint: AppStrings.fullNameHint,
+            icon: Icons.person_outline,
+            controller: nameController,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter your username';
+              }
+              return null;
+            },
           ),
           const SizedBox(height: 8),
           const Text(AppStrings.email, style: AppTextStyles.styleBold14),
-           CustomTextField(hint: AppStrings.emailHint, icon: Icons.email_outlined,
-           controller: emailController,
-           validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter your email';
-                }
-                if (!value.contains('@')) {
-                  return 'Please enter a valid email address';
-                }
-                return null;
-              },
-           ),
+          CustomTextField(
+            hint: AppStrings.emailHint,
+            icon: Icons.email_outlined,
+            controller: emailController,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter your email';
+              }
+              if (!value.contains('@')) {
+                return 'Please enter a valid email address';
+              }
+              return null;
+            },
+          ),
           const SizedBox(height: 8),
           const Text(AppStrings.password, style: AppTextStyles.styleBold14),
-           CustomTextField(hint: '••••••', icon: Icons.lock_outline, isPassword: true,
-           controller: passwordController,
-           validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter your password';
-                }
-                if (value.length < 6) {
-                  return 'Password must be at least 6 characters long';
-                }
-                return null;
-              },
-           ),
+          CustomTextField(
+            hint: '••••••',
+            icon: Icons.lock_outline,
+            isPassword: true,
+            controller: passwordController,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter your password';
+              }
+              if (value.length < 6) {
+                return 'Password must be at least 6 characters long';
+              }
+              return null;
+            },
+          ),
           const SizedBox(height: 16),
-          CustomBottom(onTap: () {
-            if (formKey.currentState!.validate()) {
-                    context.read<AuthCubit>().signUp(
-                      email: emailController.text.trim(),
-                      password: passwordController.text.trim(),
-                      username: nameController.text.trim(),
-                    );
-                    Navigator.pushNamed(context, AppRoutes.layoutView);
-                  }
-          }, text: AppStrings.signUp),
+          CustomBottom(
+            onTap: () {
+              if (formKey.currentState!.validate()) {
+                context.read<AuthCubit>().signUp(
+                  email: emailController.text.trim(),
+                  password: passwordController.text.trim(),
+                  username: nameController.text.trim(),
+                );
+                Navigator.pushNamed(context, AppRoutes.layoutView);
+              }
+            },
+            text: AppStrings.signUp,
+          ),
         ],
       ),
     );

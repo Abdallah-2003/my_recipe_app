@@ -14,7 +14,10 @@ class SignUpHeader extends StatelessWidget {
         const SizedBox(height: 24),
         Text(AppStrings.createAccount, style: AppTextStyles.styleBold30),
         const SizedBox(height: 8),
-        Text(AppStrings.joinCommunity, style: AppTextStyles.styleRegular16.copyWith(color: Colors.grey)),
+        Text(
+          AppStrings.joinCommunity,
+          style: AppTextStyles.styleRegular16.copyWith(color: Colors.grey),
+        ),
       ],
     );
   }

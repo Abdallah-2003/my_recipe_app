@@ -1,9 +1,6 @@
-
-
 import 'package:flutter/material.dart';
 
 abstract class AppIcons {
-  
   static const IconData home = Icons.home;
   static const IconData favorite = Icons.favorite;
   static const IconData profile = Icons.person;
@@ -16,5 +13,4 @@ abstract class AppIcons {
   static const IconData fire = Icons.local_fire_department_outlined;
   static const IconData favoriteBorder = Icons.favorite_border;
   static const IconData chevronRight = Icons.chevron_right;
-  
 }

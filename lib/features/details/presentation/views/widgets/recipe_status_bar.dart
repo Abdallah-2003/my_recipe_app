@@ -25,6 +25,4 @@ class RecipeStatsBar extends StatelessWidget {
       ),
     );
   }
-
-  
 }

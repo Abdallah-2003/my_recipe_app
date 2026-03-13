@@ -24,7 +24,11 @@ class SignInView extends StatelessWidget {
             if (state is SignInFailure) {
               snackBar(context: context, message: state.message);
             } else if (state is SignInSuccess) {
-              snackBar(context: context, message: 'Login successful!', backgroundColor: Colors.green);
+              snackBar(
+                context: context,
+                message: 'Login successful!',
+                backgroundColor: Colors.green,
+              );
             }
           },
           builder: (context, state) {

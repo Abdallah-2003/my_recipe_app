@@ -11,15 +11,10 @@ class LayoutCubit extends Cubit<LayoutState> {
 
   int currentIndex = 0;
 
-  List<Widget> views = [
-    HomeView(),
-    SignInView(),
-    SignUpView()
-  ];
+  List<Widget> views = [HomeView(), SignInView(), SignUpView()];
 
   changeCurrentIndex(int index) {
     currentIndex = index;
     emit(Layoutchange());
   }
-
 }

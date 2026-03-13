@@ -14,7 +14,7 @@ class CategoryView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        scrolledUnderElevation: 0, 
+        scrolledUnderElevation: 0,
         centerTitle: true,
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
@@ -27,13 +27,11 @@ class CategoryView extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(AppIcons.search, color: AppColors.c8b), 
+            icon: const Icon(AppIcons.search, color: AppColors.c8b),
           ),
         ],
       ),
-      body: const SafeArea(
-        child: CategoryGridView(),
-      ),
+      body: const SafeArea(child: CategoryGridView()),
     );
   }
 }

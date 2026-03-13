@@ -11,7 +11,7 @@ class FavoritesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.cfc, 
+      backgroundColor: AppColors.cfc,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -28,7 +28,7 @@ class FavoritesView extends StatelessWidget {
           crossAxisCount: 2,
           mainAxisSpacing: 24,
           crossAxisSpacing: 16,
-          childAspectRatio: 0.65, 
+          childAspectRatio: 0.65,
         ),
         itemCount: 4, // داتا وهمية
         itemBuilder: (context, index) {
@@ -42,4 +42,3 @@ class FavoritesView extends StatelessWidget {
     );
   }
 }
-

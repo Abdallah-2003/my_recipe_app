@@ -20,29 +20,29 @@ class InstructionsSection extends StatelessWidget {
       children: [
         Text(AppStrings.instructions, style: AppTextStyles.styleBold18),
         const SizedBox(height: 16),
-        ...List.generate(instructions.length, (index) => Padding(
-          padding: const EdgeInsets.only(bottom: 24),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              CircleAvatar(
-                radius: 12,
-                backgroundColor: AppColors.c2a, 
-                child: Text(
-                  '${index + 1}',
-                  style: AppTextStyles.styleBold12,
+        ...List.generate(
+          instructions.length,
+          (index) => Padding(
+            padding: const EdgeInsets.only(bottom: 24),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CircleAvatar(
+                  radius: 12,
+                  backgroundColor: AppColors.c2a,
+                  child: Text('${index + 1}', style: AppTextStyles.styleBold12),
                 ),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Text(
-                  instructions[index],
-                  style: AppTextStyles.styleRegular14,
+                const SizedBox(width: 16),
+                Expanded(
+                  child: Text(
+                    instructions[index],
+                    style: AppTextStyles.styleRegular14,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        )),
+        ),
       ],
     );
   }

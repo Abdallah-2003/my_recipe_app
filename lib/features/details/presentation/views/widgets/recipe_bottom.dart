@@ -25,11 +25,16 @@ class RecipeBottomBar extends StatelessWidget {
         child: ElevatedButton.icon(
           onPressed: () {},
           icon: const Icon(AppIcons.bookmarkBorder, color: AppColors.white),
-          label: const Text(AppStrings.addToFavorite, style: AppTextStyles.styleBold16),
+          label: const Text(
+            AppStrings.addToFavorite,
+            style: AppTextStyles.styleBold16,
+          ),
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.primary,
             minimumSize: const Size(double.infinity, 56),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
           ),
         ),
       ),

@@ -20,13 +20,8 @@ class RecipeHeaderInfo extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 12),
-        Text(
-          AppStrings.recipeName,
-          style: AppTextStyles.styleBold24,
-        ),
+        Text(AppStrings.recipeName, style: AppTextStyles.styleBold24),
       ],
     );
   }
-
-  
 }

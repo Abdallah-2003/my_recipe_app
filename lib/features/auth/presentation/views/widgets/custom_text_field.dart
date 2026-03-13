@@ -11,7 +11,9 @@ class CustomTextField extends StatelessWidget {
     super.key,
     required this.hint,
     required this.icon,
-    this.isPassword = false, required this.controller, required this.validator,
+    this.isPassword = false,
+    required this.controller,
+    required this.validator,
   });
 
   @override
@@ -21,7 +23,7 @@ class CustomTextField extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFFE2E8F0)), 
+        border: Border.all(color: const Color(0xFFE2E8F0)),
       ),
       child: TextFormField(
         validator: validator,
@@ -29,8 +31,12 @@ class CustomTextField extends StatelessWidget {
         obscureText: isPassword,
         decoration: InputDecoration(
           prefixIcon: Icon(icon, color: const Color(0xFF94A3B8), size: 20),
-          suffixIcon: isPassword 
-              ? const Icon(Icons.visibility_outlined, color: Color(0xFF94A3B8), size: 20) 
+          suffixIcon: isPassword
+              ? const Icon(
+                  Icons.visibility_outlined,
+                  color: Color(0xFF94A3B8),
+                  size: 20,
+                )
               : null,
           hintText: hint,
           hintStyle: const TextStyle(color: Color(0xFF94A3B8), fontSize: 14),

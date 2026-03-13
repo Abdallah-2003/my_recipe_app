@@ -12,10 +12,7 @@ class HomeHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          AppStrings.recipeFinder,
-          style: AppTextStyles.styleBold20,
-        ),
+        Text(AppStrings.recipeFinder, style: AppTextStyles.styleBold20),
         IconButton(
           onPressed: () {},
           icon: const Icon(Icons.search, color: AppColors.primary, size: 28),

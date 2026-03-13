@@ -5,8 +5,6 @@ import 'package:my_recipe/features/auth/presentation/views/sign_up_view.dart';
 import 'package:my_recipe/features/home/presentation/views/home_view.dart';
 import 'package:my_recipe/features/layout/presentation/views/layout_navbar_view.dart';
 
-
-
 abstract class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {

@@ -16,7 +16,6 @@ class SignInForm extends StatefulWidget {
 }
 
 class _SignInFormState extends State<SignInForm> {
-
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -36,7 +35,7 @@ class _SignInFormState extends State<SignInForm> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(AppStrings.email, style: AppTextStyles.styleBold14),
-           CustomTextField(
+          CustomTextField(
             controller: emailController,
             validator: (value) {
               if (value == null || value.isEmpty) {
@@ -52,7 +51,7 @@ class _SignInFormState extends State<SignInForm> {
           ),
           const SizedBox(height: 8),
           const Text(AppStrings.password, style: AppTextStyles.styleBold14),
-           CustomTextField(
+          CustomTextField(
             controller: passwordController,
             validator: (value) {
               if (value == null || value.isEmpty) {
@@ -72,18 +71,24 @@ class _SignInFormState extends State<SignInForm> {
             alignment: AlignmentGeometry.centerRight,
             child: Text(
               AppStrings.forgetPassword,
-              style: AppTextStyles.styleBold14.copyWith(color: AppColors.primary),
+              style: AppTextStyles.styleBold14.copyWith(
+                color: AppColors.primary,
+              ),
             ),
           ),
           const SizedBox(height: 16),
-          CustomBottom(onTap: () {
-            if (formKey.currentState!.validate()) {
-              context.read<AuthCubit>().signIn(
-                email: emailController.text.trim(),
-                password: passwordController.text.trim());
-            }
-            Navigator.pushNamed(context, AppRoutes.layoutView);
-          }, text: AppStrings.signIn),
+          CustomBottom(
+            onTap: () {
+              if (formKey.currentState!.validate()) {
+                context.read<AuthCubit>().signIn(
+                  email: emailController.text.trim(),
+                  password: passwordController.text.trim(),
+                );
+              }
+              Navigator.pushNamed(context, AppRoutes.layoutView);
+            },
+            text: AppStrings.signIn,
+          ),
         ],
       ),
     );

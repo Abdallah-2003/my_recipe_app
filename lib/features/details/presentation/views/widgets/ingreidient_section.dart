@@ -22,28 +22,31 @@ class IngredientsSection extends StatelessWidget {
       children: [
         Text(AppStrings.ingredients, style: AppTextStyles.styleBold18),
         const SizedBox(height: 12),
-        ...ingredients.map((ingredient) => Padding(
-          padding: const EdgeInsets.only(bottom: 12),
-          child: Row(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: AppColors.cd5,
-                  shape: BoxShape.circle,
+        ...ingredients.map(
+          (ingredient) => Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: Row(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: AppColors.cd5,
+                    shape: BoxShape.circle,
+                  ),
+                  padding: const EdgeInsets.all(4),
+                  child: const Icon(
+                    AppIcons.check,
+                    size: 14,
+                    color: AppColors.primary,
+                  ),
                 ),
-                padding: const EdgeInsets.all(4),
-                child: const Icon(AppIcons.check, size: 14, color: AppColors.primary),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Text(
-                  ingredient,
-                  style: AppTextStyles.styleRegular14,
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(ingredient, style: AppTextStyles.styleRegular14),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        )),
+        ),
       ],
     );
   }

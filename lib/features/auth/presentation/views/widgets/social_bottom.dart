@@ -17,7 +17,9 @@ class SocialButton extends StatelessWidget {
       child: Center(
         child: Text(
           label,
-          style: AppTextStyles.styleBold16.copyWith(color: const Color(0xFF334155)),
+          style: AppTextStyles.styleBold16.copyWith(
+            color: const Color(0xFF334155),
+          ),
         ),
       ),
     );

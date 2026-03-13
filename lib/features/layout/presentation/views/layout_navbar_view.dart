@@ -15,7 +15,7 @@ class LayoutNavbarView extends StatelessWidget {
       create: (context) => LayoutCubit(),
       child: BlocBuilder<LayoutCubit, LayoutState>(
         builder: (context, state) {
-          int currentIndex = context.read<LayoutCubit>().currentIndex; 
+          int currentIndex = context.read<LayoutCubit>().currentIndex;
           return Scaffold(
             body: context.read<LayoutCubit>().views[currentIndex],
             bottomNavigationBar: BottomNavigationBar(

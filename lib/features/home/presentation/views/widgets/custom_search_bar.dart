@@ -9,7 +9,7 @@ class CustomSearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: const Color(0xFFF8FAFC), 
+        color: const Color(0xFFF8FAFC),
         borderRadius: BorderRadius.circular(16),
       ),
       child: TextField(

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:my_recipe/core/constant/app_colors.dart';
 import 'package:my_recipe/core/constant/app_icons.dart';
@@ -39,14 +38,18 @@ class FavoriteCard extends StatelessWidget {
                 child: CircleAvatar(
                   backgroundColor: AppColors.white,
                   radius: 16,
-                  child: const Icon(AppIcons.favorite, color: AppColors.primary, size: 18),
+                  child: const Icon(
+                    AppIcons.favorite,
+                    color: AppColors.primary,
+                    size: 18,
+                  ),
                 ),
               ),
             ],
           ),
         ),
         const SizedBox(height: 12),
-        
+
         Text(
           title,
           style: AppTextStyles.styleBold14,
@@ -58,10 +61,7 @@ class FavoriteCard extends StatelessWidget {
           children: [
             const Icon(AppIcons.accessTime, size: 14, color: AppColors.cb8),
             const SizedBox(width: 4),
-            Text(
-              time,
-              style: AppTextStyles.styleRegular12,
-            ),
+            Text(time, style: AppTextStyles.styleRegular12),
           ],
         ),
       ],

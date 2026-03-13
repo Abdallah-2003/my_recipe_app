@@ -22,7 +22,11 @@ class SignUpView extends StatelessWidget {
           if (state is SignUpFailure) {
             snackBar(context: context, message: state.message);
           } else if (state is SignUpSuccess) {
-            snackBar(context: context, message: 'Register Succesful!', backgroundColor: Colors.green);
+            snackBar(
+              context: context,
+              message: 'Register Succesful!',
+              backgroundColor: Colors.green,
+            );
           }
         },
         builder: (context, state) {
