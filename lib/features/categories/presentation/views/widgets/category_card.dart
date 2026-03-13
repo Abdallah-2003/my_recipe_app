@@ -36,7 +36,7 @@ class CategoryCard extends StatelessWidget {
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
             ),
-            child: Image.asset(
+            child: Image.network(
               image,
               height: 160,
               width: double.infinity,
@@ -50,6 +50,8 @@ class CategoryCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Text(
               title,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 2,
               style: AppTextStyles.styleBold16.copyWith(color: AppColors.c2a),
             ),
           ),

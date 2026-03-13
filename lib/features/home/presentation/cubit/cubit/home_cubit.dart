@@ -12,10 +12,8 @@ class HomeCubit extends Cubit<HomeState> {
     emit(HomeLoading());
     final result = await homeRepo.getCategories();
     result.fold(
-      (error) => emit(HomeFailure(msg: error)), 
-      (categories) => emit(HomeSuccess(categories: categories))
-      
+      (error) => emit(HomeFailure(msg: error)),
+      (categories) => emit(HomeSuccess(categories: categories)),
     );
-
   }
 }

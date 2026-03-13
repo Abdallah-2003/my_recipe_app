@@ -11,12 +11,13 @@ class CategoriesModel {
     this.strCategoryDescription,
   });
 
-  factory CategoriesModel.fromJson(Map<String, dynamic> json) => CategoriesModel(
-    idCategory: json['idCategory'] as String?,
-    strCategory: json['strCategory'] as String?,
-    strCategoryThumb: json['strCategoryThumb'] as String?,
-    strCategoryDescription: json['strCategoryDescription'] as String?,
-  );
+  factory CategoriesModel.fromJson(Map<String, dynamic> json) =>
+      CategoriesModel(
+        idCategory: json['idCategory'] as String?,
+        strCategory: json['strCategory'] as String?,
+        strCategoryThumb: json['strCategoryThumb'] as String?,
+        strCategoryDescription: json['strCategoryDescription'] as String?,
+      );
 
   Map<String, dynamic> toJson() => {
     'idCategory': idCategory,
