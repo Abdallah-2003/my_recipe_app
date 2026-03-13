@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_recipe/core/networking/supabase_services.dart';
 import 'package:my_recipe/features/details/presentation/views/recipe_details_view.dart';
 
 void main() async {
