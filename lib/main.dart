@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_recipe/core/networking/supabase_services.dart';
-import 'package:my_recipe/core/routing/app_router.dart';
-import 'package:my_recipe/core/routing/routes.dart';
+import 'package:my_recipe/features/details/presentation/views/recipe_details_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,8 +15,7 @@ class MyRecipe extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'my recipe app',
-      initialRoute: AppRoutes.loginView,
-      onGenerateRoute: AppRouter.generateRoute,
+      home: const RecipeDetailsView(),
     );
   }
 }

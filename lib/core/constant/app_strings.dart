@@ -45,25 +45,6 @@ abstract class AppStrings {
   static const String italian = 'ITALIAN';
   static const String dinner = 'DINNER';
   static const String recipeName = 'Spicy Basil Pesto Pasta';
-
-  // my favorite view
-  static const String myFavorite = 'My Favorites';
-
-  // profile screen
-  static const String profileSmall = 'Profile'; 
-  static const String account = 'ACCOUNT'; 
-  static const String preferences = 'PREFERENCES'; 
-  static const String editProfile = 'Edit Profile'; 
-  static const String changePassword = 'Change Password'; 
-  static const String darkMode = 'Dark Mode'; 
-  static const String language = 'Language'; 
-  static const String english = 'English'; 
-  static const String support = 'SUPPORT'; 
-  static const String helpCenter = 'Help Center'; 
-  static const String privacyPolicy = 'Privacy Policy'; 
-  static const String terms = 'Terms of Services'; 
-  static const String logout = 'Logout'; 
-
 }
 
 
