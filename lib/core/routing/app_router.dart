@@ -4,8 +4,11 @@ import 'package:my_recipe/features/auth/presentation/views/sign_in_view.dart';
 import 'package:my_recipe/features/auth/presentation/views/sign_up_view.dart';
 import 'package:my_recipe/features/categories/presentation/views/category_view.dart';
 import 'package:my_recipe/features/details/presentation/views/recipe_details_view.dart';
+import 'package:my_recipe/features/favorites/presentation/views/my_favorite_view.dart';
 import 'package:my_recipe/features/home/presentation/views/home_view.dart';
 import 'package:my_recipe/features/layout/presentation/views/layout_navbar_view.dart';
+import 'package:my_recipe/features/profile/presentation/views/profile_view.dart';
+import 'package:my_recipe/features/splash/presentation/splash_view.dart';
 
 abstract class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -51,6 +54,27 @@ abstract class AppRouter {
         return MaterialPageRoute(
           builder: (context) {
             return RecipeDetailsView(id: id);
+          },
+        );
+
+      case AppRoutes.splashView:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const SplashView();
+          },
+        );
+
+      case AppRoutes.favoriteView:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const FavoritesView();
+          },
+        );
+
+      case AppRoutes.profileView:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const ProfileView();
           },
         );
 
