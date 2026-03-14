@@ -10,6 +10,9 @@ import 'package:my_recipe/features/details/presentation/views/widgets/recipe_hea
 import 'package:my_recipe/features/details/presentation/views/widgets/recipe_image_header.dart';
 import 'package:my_recipe/features/details/presentation/views/widgets/recipe_status_bar.dart';
 import 'package:my_recipe/features/details/presentation/views/widgets/recipe_top_bottoms.dart';
+import 'package:my_recipe/features/favorites/data/model/favorite_model.dart';
+import 'package:my_recipe/features/favorites/data/repo/favorite_repo.dart';
+import 'package:my_recipe/features/favorites/presentation/cubit/favorites_cubit/favorites_cubit.dart';
 
 class RecipeDetailsView extends StatelessWidget {
   const RecipeDetailsView({super.key, required this.id});
@@ -18,9 +21,15 @@ class RecipeDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) =>
-          DetailsCubit(DetailsRepo())..getDetails(id),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => DetailsCubit(DetailsRepo())..getDetails(id),
+        ),
+        BlocProvider(
+          create: (context) => FavoriteCubit(FavoriteRepo())..loadFavorites(),
+        ),
+      ],
       child: BlocBuilder<DetailsCubit, DetailsState>(
         builder: (context, state) {
           return state is DetailsLoading
@@ -34,12 +43,17 @@ class RecipeDetailsView extends StatelessWidget {
               : state is DetailsSuccess
               ? Scaffold(
                   backgroundColor: AppColors.white,
-                  bottomNavigationBar: const RecipeBottomBar(),
+                  bottomNavigationBar: RecipeBottomBar(
+                    favoriteModel: FavoriteModel(
+                      id: id,
+                      title: state.details.name ?? '',
+                      image: state.details.image ?? '',
+                      time: '20 mins',
+                    ),
+                  ),
                   body: Stack(
                     children: [
-                      RecipeImageHeader(
-                        imagePath: state.details.image ?? '',
-                      ),
+                      RecipeImageHeader(imagePath: state.details.image ?? ''),
 
                       const RecipeTopButtons(),
 

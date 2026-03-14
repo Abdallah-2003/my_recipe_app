@@ -13,11 +13,15 @@ class RecipeTopButtons extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            CircleAvatar(
-              backgroundColor: AppColors.white,
-              child: IconButton(
-                icon: const Icon(AppIcons.arrowBack, color: Colors.black),
-                onPressed: () => Navigator.pop(context),
+            Material(
+              color: Colors.transparent,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(50),
+                onTap: () => Navigator.pop(context),
+                child: CircleAvatar(
+                  backgroundColor: AppColors.white,
+                  child: Icon(AppIcons.arrowBack, color: Colors.black),
+                ),
               ),
             ),
             CircleAvatar(

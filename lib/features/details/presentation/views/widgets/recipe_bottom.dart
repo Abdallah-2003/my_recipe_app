@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_recipe/core/constant/app_colors.dart';
 import 'package:my_recipe/core/constant/app_icons.dart';
 import 'package:my_recipe/core/constant/app_strings.dart';
+import 'package:my_recipe/core/functions.dart';
+import 'package:my_recipe/core/routing/routes.dart';
 import 'package:my_recipe/core/theme/text_styles.dart';
+import 'package:my_recipe/features/favorites/data/model/favorite_model.dart';
+import 'package:my_recipe/features/favorites/presentation/cubit/favorites_cubit/favorites_cubit.dart';
 
 class RecipeBottomBar extends StatelessWidget {
-  const RecipeBottomBar({super.key});
+  const RecipeBottomBar({super.key, required this.favoriteModel});
+
+  final FavoriteModel favoriteModel;
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +30,14 @@ class RecipeBottomBar extends StatelessWidget {
       ),
       child: SafeArea(
         child: ElevatedButton.icon(
-          onPressed: () {},
+          onPressed: () {
+            context.read<FavoriteCubit>().addFavorite(favoriteModel);
+            snackBar(context: context, message: 'added successfully', backgroundColor: Colors.green);
+            Navigator.pushNamed(context, AppRoutes.layoutView);
+          },
           icon: const Icon(AppIcons.bookmarkBorder, color: AppColors.white),
-          label: const Text(
+          label:  Text(
+            context.read<FavoriteCubit>().isFavorite(favoriteModel.id) ? AppStrings.view :
             AppStrings.addToFavorite,
             style: AppTextStyles.styleBold16,
           ),
