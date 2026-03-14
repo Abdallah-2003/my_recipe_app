@@ -11,7 +11,7 @@ class RecipeImageHeader extends StatelessWidget {
       left: 0,
       right: 0,
       height: 320,
-      child: Image.asset(imagePath, fit: BoxFit.cover),
+      child: Image.network(imagePath, fit: BoxFit.cover),
     );
   }
 }

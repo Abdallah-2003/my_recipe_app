@@ -19,11 +19,7 @@ class CategoryGridView extends StatelessWidget {
       ),
       itemCount: categories.length,
       itemBuilder: (context, index) {
-        return CategoryCard(
-          image: categories[index].strMealThumb ?? '',
-          title: categories[index].strMeal ?? '',
-          time: '20 mins',
-        );
+        return CategoryCard(categoryModel: categories[index]);
       },
     );
   }

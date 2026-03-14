@@ -5,7 +5,9 @@ import 'package:my_recipe/core/functions.dart';
 import 'package:my_recipe/core/theme/text_styles.dart';
 
 class RecipeHeaderInfo extends StatelessWidget {
-  const RecipeHeaderInfo({super.key});
+  const RecipeHeaderInfo({super.key, required this.recipeName});
+
+  final String recipeName;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class RecipeHeaderInfo extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 12),
-        Text(AppStrings.recipeName, style: AppTextStyles.styleBold24),
+        Text(recipeName, style: AppTextStyles.styleBold24),
       ],
     );
   }

@@ -19,7 +19,11 @@ class CategoryView extends StatelessWidget {
       child: BlocBuilder<CategoryCubit, CategoryState>(
         builder: (context, state) {
           return state is CategoryLoading
-              ? Center(child: CircularProgressIndicator())
+              ? Center(
+                  child: CircularProgressIndicator(
+                    backgroundColor: AppColors.white,
+                  ),
+                )
               : state is CategoryFailure
               ? Center(child: Text('there was an error, please try again'))
               : state is CategorySuccess && state.categories.isEmpty
@@ -52,7 +56,9 @@ class CategoryView extends StatelessWidget {
                       ),
                     ],
                   ),
-                  body:  SafeArea(child: CategoryGridView(categories: state.categories,)),
+                  body: SafeArea(
+                    child: CategoryGridView(categories: state.categories),
+                  ),
                 )
               : SizedBox();
         },

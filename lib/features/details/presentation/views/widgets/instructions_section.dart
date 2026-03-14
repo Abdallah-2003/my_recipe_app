@@ -4,14 +4,9 @@ import 'package:my_recipe/core/constant/app_strings.dart';
 import 'package:my_recipe/core/theme/text_styles.dart';
 
 class InstructionsSection extends StatelessWidget {
-  const InstructionsSection({super.key});
+  const InstructionsSection({super.key, required this.instructions});
 
-  final List<String> instructions = const [
-    'Bring a large pot of salted water to a boil. Cook the pasta according to package instructions until al dente. Reserve 1/2 cup of pasta water.',
-    'While the pasta cooks, combine basil, garlic, nuts, and red pepper flakes in a food processor. Pulse until finely chopped.',
-    'Slowly drizzle in olive oil while blending until smooth. Season with salt and pepper to taste.',
-    'Toss the cooked pasta with the pesto sauce, adding reserved water as needed to reach desired consistency. Serve with grated parmesan.',
-  ];
+  final List<String> instructions;
 
   @override
   Widget build(BuildContext context) {

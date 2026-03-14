@@ -3,6 +3,7 @@ import 'package:my_recipe/core/routing/routes.dart';
 import 'package:my_recipe/features/auth/presentation/views/sign_in_view.dart';
 import 'package:my_recipe/features/auth/presentation/views/sign_up_view.dart';
 import 'package:my_recipe/features/categories/presentation/views/category_view.dart';
+import 'package:my_recipe/features/details/presentation/views/recipe_details_view.dart';
 import 'package:my_recipe/features/home/presentation/views/home_view.dart';
 import 'package:my_recipe/features/layout/presentation/views/layout_navbar_view.dart';
 
@@ -38,10 +39,18 @@ abstract class AppRouter {
         );
 
       case AppRoutes.categoryView:
-      final title = settings.arguments as String;
+        final title = settings.arguments as String;
         return MaterialPageRoute(
           builder: (context) {
-            return  CategoryView(title: title,);
+            return CategoryView(title: title);
+          },
+        );
+
+      case AppRoutes.detailsView:
+        final id = settings.arguments as String;
+        return MaterialPageRoute(
+          builder: (context) {
+            return RecipeDetailsView(id: id);
           },
         );
 

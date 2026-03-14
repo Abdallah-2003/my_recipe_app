@@ -5,15 +5,9 @@ import 'package:my_recipe/core/constant/app_strings.dart';
 import 'package:my_recipe/core/theme/text_styles.dart';
 
 class IngredientsSection extends StatelessWidget {
-  const IngredientsSection({super.key});
+  const IngredientsSection({super.key, required this.ingredients});
 
-  final List<String> ingredients = const [
-    '200g Linguine or Spaghetti',
-    '2 cups Fresh Basil leaves',
-    '2 cloves Garlic, minced',
-    '1/2 tsp Red pepper flakes',
-    '50g Pine nuts or Walnuts',
-  ];
+  final List<String> ingredients;
 
   @override
   Widget build(BuildContext context) {

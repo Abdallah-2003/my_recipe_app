@@ -6,4 +6,8 @@ abstract class ApiConstants {
   static String categoryEndPoint(String category) {
     return '${baseUrl}filter.php?c=$category';
   }
+
+  static String detailsEndPoint(String id) {
+    return '${baseUrl}lookup.php?i=$id';
+  }
 }

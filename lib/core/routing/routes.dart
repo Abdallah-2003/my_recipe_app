@@ -4,4 +4,5 @@ abstract class AppRoutes {
   static const String homeView = '/homeview';
   static const String layoutView = '/layoutview';
   static const String categoryView = '/categoryview';
+  static const String detailsView = '/detailsview';
 }
