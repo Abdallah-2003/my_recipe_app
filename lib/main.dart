@@ -19,7 +19,7 @@ class MyRecipe extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'my recipe app',
-      initialRoute: AppRoutes.layoutView,
+      initialRoute: AppRoutes.splashView,
       onGenerateRoute: AppRouter.generateRoute,
     );
   }
