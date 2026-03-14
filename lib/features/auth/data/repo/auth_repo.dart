@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:my_recipe/features/auth/data/model/user_model.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class AuthRepo {
@@ -30,19 +31,47 @@ class AuthRepo {
     }
   }
 
-  Future<Either<String, void>> saveUserData({
+  Future<Either<String, UserModel>> saveUserData({
     required String username,
     required String email,
   }) async {
     try {
-      await client.from('users').insert({
-        'id': Supabase.instance.client.auth.currentUser!.id,
-        'name': username,
-        'email': email,
-      });
-      return right(null);
+      final id = Supabase.instance.client.auth.currentUser!.id;
+
+      final response = await client
+          .from('users')
+          .insert({'id': id, 'name': username, 'email': email})
+          .select()
+          .single();
+
+      return Right(UserModel.fromJson(response));
     } catch (e) {
-      return left(e.toString());
+      return Left(e.toString());
+    }
+  }
+
+  Future<Either<String, UserModel>> getUserData() async {
+  try {
+    final id = Supabase.instance.client.auth.currentUser!.id;
+
+    final response = await client
+        .from('users')
+        .select()
+        .eq('id', id)
+        .single();
+
+    return Right(UserModel.fromJson(response));
+  } catch (e) {
+    return Left(e.toString());
+  }
+}
+
+  Future<Either<String, void>> logout() async {
+    try {
+      await client.auth.signOut();
+      return const Right(null);
+    } catch (e) {
+      return Left(e.toString());
     }
   }
 }

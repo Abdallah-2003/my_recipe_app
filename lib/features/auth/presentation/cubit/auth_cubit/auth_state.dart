@@ -21,3 +21,27 @@ final class SignUpFailure extends AuthState {
   final String message;
   SignUpFailure(this.message);
 }
+
+
+final class LogoutLoading extends AuthState {}
+
+final class LogoutSuccess extends AuthState {}
+
+final class LogoutFailure extends AuthState {
+  final String message;
+  LogoutFailure(this.message);
+}
+
+final class GetUserLoading extends AuthState {}
+
+final class GetUserSuccess extends AuthState {
+  final UserModel user;
+
+  GetUserSuccess(this.user);
+}
+
+final class GetUserFailure extends AuthState {
+  final String message;
+
+  GetUserFailure(this.message);
+}

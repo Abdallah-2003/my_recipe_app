@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:my_recipe/features/auth/data/model/user_model.dart';
 import 'package:my_recipe/features/auth/data/repo/auth_repo.dart';
 
 part 'auth_state.dart';
@@ -30,6 +31,28 @@ class AuthCubit extends Cubit<AuthState> {
     result.fold(
       (failure) => emit(SignUpFailure(failure)),
       (_) => emit(SignUpSuccess()),
+    );
+  }
+
+  Future<void> logout() async {
+    emit(LogoutLoading());
+
+    final result = await authRepo.logout();
+
+    result.fold(
+      (failure) => emit(LogoutFailure(failure)),
+      (_) => emit(LogoutSuccess()),
+    );
+  }
+
+  Future<void> getUser() async {
+    emit(GetUserLoading());
+
+    final result = await authRepo.getUserData();
+
+    result.fold(
+      (failure) => emit(GetUserFailure(failure)),
+      (user) => emit(GetUserSuccess(user)),
     );
   }
 }
