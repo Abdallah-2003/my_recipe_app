@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_recipe/core/constant/app_colors.dart';
 import 'package:my_recipe/core/constant/app_strings.dart';
 import 'package:my_recipe/core/functions.dart';
+import 'package:my_recipe/core/routing/routes.dart';
 import 'package:my_recipe/core/theme/text_styles.dart';
 import 'package:my_recipe/features/auth/data/repo/auth_repo.dart';
 import 'package:my_recipe/features/auth/presentation/cubit/auth_cubit/auth_cubit.dart';
@@ -51,7 +52,7 @@ class SignUpView extends StatelessWidget {
                           style: AppTextStyles.styleMedium14,
                         ),
                         GestureDetector(
-                          onTap: () => Navigator.pop(context),
+                          onTap: () => Navigator.pushNamed(context, AppRoutes.loginView),
                           child: Text(
                             AppStrings.signIn,
                             style: AppTextStyles.styleMedium14.copyWith(

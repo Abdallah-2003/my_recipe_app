@@ -89,7 +89,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   password: passwordController.text.trim(),
                   username: nameController.text.trim(),
                 );
-                Navigator.pushNamed(context, AppRoutes.layoutView);
+                Navigator.pushNamed(context, AppRoutes.loginView);
               }
             },
             text: AppStrings.signUp,
